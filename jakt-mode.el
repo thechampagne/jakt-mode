@@ -121,7 +121,9 @@
 (define-derived-mode jakt-mode prog-mode "Jakt"
   "A major mode for the Jakt programming language."
   :syntax-table jakt-mode-syntax-table
-  (setq-local font-lock-defaults '(jakt-font-lock-keywords)))
+  (setq-local font-lock-defaults '(jakt-font-lock-keywords))
+  (setq-local comment-start "// ")
+  (setq-local comment-end ""))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.jakt\\'" . jakt-mode))
